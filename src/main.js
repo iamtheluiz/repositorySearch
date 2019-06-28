@@ -1,1 +1,0 @@
-alert('Just a test');

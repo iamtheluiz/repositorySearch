@@ -1,0 +1,21 @@
+*, html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#repositoryList{
+    padding-left: 10px;
+}
+#repositoryList li{
+    display: inline-block;
+    margin-top: 5px;
+}
+#repositoryList li img{
+    width: 100px;
+    float: left;
+}
+#repoInfo{
+    padding: 5px;
+    float: left;
+}
+#repoInfo h2, #repoInfo p, #repoInfo a{
+    margin: 0px;
+}
