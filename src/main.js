@@ -5,6 +5,7 @@ class App{
         this.repositories = []; // Stores all repositories data
         this.repositoryForm = document.getElementById("repositoryForm");
         this.repositoryNameInput = document.getElementById("repositoryName");
+        this.repositoryList = document.getElementById("repositoryList");
 
         // Listen when the page form is submited
         this.startListeningRepositoryForm();
@@ -26,9 +27,34 @@ class App{
             this.repositoryNameInput.value = '';
         
             const { name, description, html_url, owner: {avatar_url} } = response.data;
+            
+            // Build a repository object
+            const repository = {
+                name,
+                description,
+                link: html_url,
+                avatar_url
+            };
+            // Store the new repository
+            this.repositories.push(repository);
+
+            this.renderInfo(repository);
         } catch (error) {
             console.warn(error);
         }
+    }
+
+    renderInfo({name, description, link, avatar_url}){
+        const div = `<li tabindex="none">
+            <img src="${avatar_url}" alt="User Image">
+            <div id="repoInfo">
+                <h2>${name}</h2>
+                <p>${description}</p>
+                <a href="${link}">Access Now!</a>
+            </div>
+        </li>`;
+
+        this.repositoryList.innerHTML += div;
     }
 }
 
