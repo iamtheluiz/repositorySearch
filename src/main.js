@@ -44,7 +44,13 @@ class App{
 
             this.renderInfo(repository);
         } catch (error) {
-            console.warn(error);
+            this.loadingIcon.style.display = 'none';
+
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Parece que o repositório digitado não pôde ser encontrado!'
+            })
         }
     }
 
