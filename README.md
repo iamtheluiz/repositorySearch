@@ -1,67 +1,35 @@
-# Respository Search
+# Repository Search
 
-* yarn init
-* yarn add @babel/cli -D
-* yarn add @babel/preset-env -D
-* "Criar aquivo na raiz chamado '.babelrc'"
-    |   {
-    |       "presets": ["@babel/preset-env"]
-    |   }
-* yarn add @babel/core -D
-* yarn add webpack webpack-cli -D
-* "Criar arquivo 'webpack.config.js'"
-    module.exports = {
-        entry: "./main.js",
-        output: {
-            path: __dirname,
-            filename: 'bundle.js',
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                    use: {
-                        loader: "babel-loader"
-                    }
-                }
-            ],
-        }
-    };
-* yarn add babel-loader -D
-* Criar pasta "public/" para manter os arquivos do projeto que não precisam ser vistos pelo webpack
-* Criar pasta "src/" para os arquivos que serão escutados pelo webpack
-* Definir a entrada do webpack para a pasta "src":
-    | entry: "./src/main.js",
-* Definir o output do webpack para a pasta "public":
-    | output: {
-    |    path: __dirname+'/public',
-    |    filename: 'bundle.js',
-    | },
-* yarn add webpack-dev-server -D
-* Definir o caminho do servidor no webpack.config (propriedade 'devServer.contentbase'):
-    | module.exports = {
-    |    entry: "./main.js",
-    |    output: {
-    |        path: __dirname+'/public',
-    |        filename: 'bundle.js',
-    |    },
-    |    devServer: {
-    |        contentBase: __dirname+'/public'
-    |    },
-    |    module: {
-    |        rules: [
-    |            {
-    |                test: /\.js$/,
-    |                exclude: /node_modules/,
-    |                use: {
-    |                    loader: "babel-loader"
-    |                }
-    |            }
-    |        ],
-    |    }
-    | };
-* Alterar script "dev" para:
-    | "dev": "webpack-dev-server --mode=development"
-* Adicionar script "build":
-    | "build": "webpack --mode=production"
+Site that can search a github repository (indicated by the user) and shows informations about that repository.
+
+## Getting Started
+
+### Prerequisites
+
+This project uses Node and Yarn!
+
+### Installing
+
+First, you have to clone this project:
+
+```
+git clone git@github.com:CollabCodeTech/bot-gueio.git
+```
+
+With Node and Yarn installed, run the following command into project root (this will install all dependencies):
+
+```
+yarn install
+```
+
+To start project, run:
+
+```
+yarn run dev
+```
+
+## Built With
+
+* [NodeJs](https://nodejs.org)
+* [Yarn](https://yarnpkg.com/)
+* [Sweet Alert 2](https://sweetalert2.github.io/)
