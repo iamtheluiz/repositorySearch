@@ -1,21 +1,81 @@
 *, html{
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background-color: #1D201F;
+}
+#repositoryForm{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    padding-bottom: 15px;
+}
+#repositoryForm input{
+    float: left;
+    width: calc(84% - 10px);
+    height: 30px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #353d45;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px;
+    font-size: 11pt;
+    color: #D1DEDE;
+    outline: none;
+}
+#repositoryForm button{
+    float: left;
+    width: 15%;
+    height: 30px;
+    border-radius: 0px 8px 8px 0px;
+    padding: 0px;
+    background-color: white;
+    font-size: 15pt;
+    border: 0px;
+    outline: none;
+}
+#repositoryForm button:focus{
+    background-color: black;
+    color: white;
+    margin-top: 2px;
+    height: 28px;
+}
 #repositoryList{
     padding-left: 10px;
+    padding-top: 10px;
 }
 #repositoryList li{
+    width: 100%;
     display: inline-block;
     margin-top: 5px;
 }
 #repositoryList li img{
     width: 100px;
     float: left;
+    border-radius: 10px;
+    box-shadow: 2px 2px #D1DEDE;
 }
 #repoInfo{
-    padding: 5px;
+    width: calc(100% - 108px);
+    margin-left: 8px;
     float: left;
 }
 #repoInfo h2, #repoInfo p, #repoInfo a{
     margin: 0px;
+    color: white;
+    text-decoration-line: none;
+}
+#repoInfo p{
+    margin-bottom: 5px;
+}
+#repoInfo a{
+    border: 2px solid #D1DEDE;
+    padding: 2px;
+    border-radius: 5px;
+}
+#repoInfo a:hover{
+    border: 2px solid black;
+    color: black;
+    background-color: #D1DEDE;
 }
