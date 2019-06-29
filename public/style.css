@@ -79,3 +79,19 @@ body{
     color: black;
     background-color: #D1DEDE;
 }
+#loading {
+    width: 70px;
+    height: 70px;
+    margin-left: calc(50% - (70px / 2));
+    margin-top: 10px;
+    animation: rotation 2s infinite linear;
+    filter: invert(100);
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

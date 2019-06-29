@@ -6,6 +6,7 @@ class App{
         this.repositoryForm = document.getElementById("repositoryForm");
         this.repositoryNameInput = document.getElementById("repositoryName");
         this.repositoryList = document.getElementById("repositoryList");
+        this.loadingIcon = document.getElementById("loading");
 
         // Listen when the page form is submited
         this.startListeningRepositoryForm();
@@ -16,12 +17,15 @@ class App{
     }
 
     async addRepository(event){
+        this.loadingIcon.style.display = 'inherit';
         // Prevents that the form redirects to another page
         event.preventDefault();
 
         //Get repository information
         try {
             const response = await axios.get(`https://api.github.com/repos/${this.repositoryNameInput.value}`)
+
+            this.loadingIcon.style.display = 'none';
 
             // Clear the input field
             this.repositoryNameInput.value = '';
