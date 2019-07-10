@@ -13,7 +13,7 @@ This project uses Node and Yarn!
 First, you have to clone this project:
 
 ```
-git clone git@github.com:CollabCodeTech/bot-gueio.git
+https://github.com/iamtheluiz/repositorySearch.git
 ```
 
 With Node and Yarn installed, run the following command into project root (this will install all dependencies):
